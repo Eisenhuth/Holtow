@@ -12,30 +12,33 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: old leaderboards
+      - name: digitally insured, virtually secured
         run: |
-          mkdir -p ./archive
-          wget -O ./archive/CB1.json https://embark-discovery-leaderboard.storage.googleapis.com/leaderboard-beta-1.json
-          wget -O ./archive/CB2.json https://embark-discovery-leaderboard.storage.googleapis.com/leaderboard.json
-          wget -O ./archive/OB.json https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-crossplay.json
+          mkdir -p ./Beta
+          wget -O ./Beta/CB1.json https://embark-discovery-leaderboard.storage.googleapis.com/leaderboard-beta-1.json
+          wget -O ./Beta/CB2.json https://embark-discovery-leaderboard.storage.googleapis.com/leaderboard.json
+          wget -O ./Beta/OB.json https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-crossplay.json
 
-          wget -O ./archive/S1_crossplay.json https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-crossplay-discovery-live.json
-          wget -O ./archive/S1_psn.json https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-psn-discovery-live.json
-          wget -O ./archive/S1_xbox.json https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-xbox-discovery-live.json
-          wget -O ./archive/S1_steam.json https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-steam-discovery-live.json
+          mkdir -p ./Season1
+          wget -O ./Season1/S1_crossplay.json https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-crossplay-discovery-live.json
+          wget -O ./Season1/S1_psn.json https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-psn-discovery-live.json
+          wget -O ./Season1/S1_xbox.json https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-xbox-discovery-live.json
+          wget -O ./Season1/S1_steam.json https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-steam-discovery-live.json
 
-      - name: live leaderboards
-        run: |
-          mkdir -p ./live
-          wget -O ./live/crossplay.json https://storage.googleapis.com/embark-discovery-leaderboard/s2-leaderboard-crossplay-discovery-live.json
-          wget -O ./live/psn.json https://storage.googleapis.com/embark-discovery-leaderboard/s2-leaderboard-psn-discovery-live.json
-          wget -O ./live/xbox.json https://storage.googleapis.com/embark-discovery-leaderboard/s2-leaderboard-xbox-discovery-live.json
-          wget -O ./live/steam.json https://storage.googleapis.com/embark-discovery-leaderboard/s2-leaderboard-steam-discovery-live.json
+          mkdir -p ./Season2
+          wget -O ./Season2/S2_crossplay.json https://storage.googleapis.com/embark-discovery-leaderboard/s2-leaderboard-crossplay-discovery-live.json
+          wget -O ./Season2/S2_psn.json https://storage.googleapis.com/embark-discovery-leaderboard/s2-leaderboard-psn-discovery-live.json
+          wget -O ./Season2/S2_xbox.json https://storage.googleapis.com/embark-discovery-leaderboard/s2-leaderboard-xbox-discovery-live.json
+          wget -O ./Season2/S2_steam.json https://storage.googleapis.com/embark-discovery-leaderboard/s2-leaderboard-steam-discovery-live.json
+
+          mkdir -p ./Season3
+          wget -O ./Season3/S3_worldtour.json https://api.the-finals-leaderboard.com/v1/leaderboard/s3worldtour/crossplay
+          wget -O ./Season3/S3_ranked.json https://api.the-finals-leaderboard.com/v1/leaderboard/s3/crossplay
 
       - name: commit changes
         run: |
-         git config user.name "Github Action"
-         git config user.email github-actions[bot]@users.noreply.github.com
-         git add --all
-         git commit -m "[CI] updated leaderboards"
-         git push
+          git config user.name "Github Action"
+          git config user.email github-actions[bot]@users.noreply.github.com
+          git add --all
+          git commit -m "[CI] updated leaderboards"
+          git push
