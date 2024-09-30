@@ -35,6 +35,11 @@ jobs:
           wget -O ./Season3/S3_worldtour.json https://api.the-finals-leaderboard.com/v1/leaderboard/s3worldtour/crossplay
           wget -O ./Season3/S3_ranked.json https://api.the-finals-leaderboard.com/v1/leaderboard/s3/crossplay
 
+          mkdir -p ./Season4
+          wget -O ./Season4/S4_worldtour.json https://api.the-finals-leaderboard.com/v1/leaderboard/s4worldtour/crossplay
+          wget -O ./Season4/S4_crossplay.json https://api.the-finals-leaderboard.com/v1/leaderboard/s4/crossplay
+          wget -O ./Season4/S4_sponsor.json https://api.the-finals-leaderboard.com/v1/leaderboard/s4sponsor/crossplay
+
       - name: commit changes
         run: |
           git config user.name "Github Action"
