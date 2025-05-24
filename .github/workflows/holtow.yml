@@ -49,6 +49,10 @@ jobs:
           wget -O ./Season6/S6_worldtour.json https://api.the-finals-leaderboard.com/v1/leaderboard/s6worldtour/crossplay
           wget -O ./Season6/S6_crossplay.json https://api.the-finals-leaderboard.com/v1/leaderboard/s6/crossplay
           wget -O ./Season6/S6_sponsor.json https://api.the-finals-leaderboard.com/v1/leaderboard/s6sponsor/crossplay
+          wget -O ./Season6/S6_powershift.json https://api.the-finals-leaderboard.com/v1/leaderboard/s6powershift/crossplay
+          wget -O ./Season6/S6_tdm.json https://api.the-finals-leaderboard.com/v1/leaderboard/s6teamdeathmatch/crossplay
+          wget -O ./Season6/S6_quickcash.json https://api.the-finals-leaderboard.com/v1/leaderboard/s6quickcash/crossplay
+          wget -O ./Season6/S6_terminalattack.json https://api.the-finals-leaderboard.com/v1/leaderboard/s6terminalattack/crossplay
 
       - name: commit changes
         run: |
