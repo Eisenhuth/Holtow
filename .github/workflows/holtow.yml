@@ -15,25 +15,25 @@ jobs:
       - name: digitally insured, virtually secured
         run: |
           mkdir -p ./Beta
-          wget -O ./Beta/CB1.json https://embark-discovery-leaderboard.storage.googleapis.com/leaderboard-beta-1.json
-          wget -O ./Beta/CB2.json https://embark-discovery-leaderboard.storage.googleapis.com/leaderboard.json
-          wget -O ./Beta/OB.json https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-crossplay.json
+          wget -O ./Beta/CB1.json https://api.the-finals-leaderboard.com/v1/leaderboard/cb1
+          wget -O ./Beta/CB2.json https://api.the-finals-leaderboard.com/v1/leaderboard/cb2
+          wget -O ./Beta/OB.json https://api.the-finals-leaderboard.com/v1/leaderboard/ob/crossplay
 
           mkdir -p ./Season1
-          wget -O ./Season1/S1_crossplay.json https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-crossplay-discovery-live.json
-          wget -O ./Season1/S1_psn.json https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-psn-discovery-live.json
-          wget -O ./Season1/S1_xbox.json https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-xbox-discovery-live.json
-          wget -O ./Season1/S1_steam.json https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-steam-discovery-live.json
+          wget -O ./Season1/S1_crossplay.json https://api.the-finals-leaderboard.com/v1/leaderboard/s1/crossplay
+          wget -O ./Season1/S1_psn.json https://api.the-finals-leaderboard.com/v1/leaderboard/s1/psn
+          wget -O ./Season1/S1_xbox.json https://api.the-finals-leaderboard.com/v1/leaderboard/s1/xbox
+          wget -O ./Season1/S1_steam.json https://api.the-finals-leaderboard.com/v1/leaderboard/s1/steam
 
           mkdir -p ./Season2
-          wget -O ./Season2/S2_crossplay.json https://storage.googleapis.com/embark-discovery-leaderboard/s2-leaderboard-crossplay-discovery-live.json
-          wget -O ./Season2/S2_psn.json https://storage.googleapis.com/embark-discovery-leaderboard/s2-leaderboard-psn-discovery-live.json
-          wget -O ./Season2/S2_xbox.json https://storage.googleapis.com/embark-discovery-leaderboard/s2-leaderboard-xbox-discovery-live.json
-          wget -O ./Season2/S2_steam.json https://storage.googleapis.com/embark-discovery-leaderboard/s2-leaderboard-steam-discovery-live.json
+          wget -O ./Season2/S2_crossplay.json https://api.the-finals-leaderboard.com/v1/leaderboard/s2/crossplay
+          wget -O ./Season2/S2_psn.json https://api.the-finals-leaderboard.com/v1/leaderboard/s2/psn
+          wget -O ./Season2/S2_xbox.json https://api.the-finals-leaderboard.com/v1/leaderboard/s2/xbox
+          wget -O ./Season2/S2_steam.json https://api.the-finals-leaderboard.com/v1/leaderboard/s2/steam
 
           mkdir -p ./Season3
           wget -O ./Season3/S3_worldtour.json https://api.the-finals-leaderboard.com/v1/leaderboard/s3worldtour/crossplay
-          wget -O ./Season3/S3_ranked.json https://api.the-finals-leaderboard.com/v1/leaderboard/s3/crossplay
+          wget -O ./Season3/S3_crossplay.json https://api.the-finals-leaderboard.com/v1/leaderboard/s3/crossplay
 
           mkdir -p ./Season4
           wget -O ./Season4/S4_worldtour.json https://api.the-finals-leaderboard.com/v1/leaderboard/s4worldtour/crossplay
@@ -54,6 +54,15 @@ jobs:
           wget -O ./Season6/S6_quickcash.json https://api.the-finals-leaderboard.com/v1/leaderboard/s6quickcash/crossplay
           wget -O ./Season6/S6_terminalattack.json https://api.the-finals-leaderboard.com/v1/leaderboard/s6terminalattack/crossplay
 
+          mkdir -p ./Season7
+          wget -O ./Season7/S7_worldtour.json https://api.the-finals-leaderboard.com/v1/leaderboard/s7worldtour/crossplay
+          wget -O ./Season7/S7_crossplay.json https://api.the-finals-leaderboard.com/v1/leaderboard/s7/crossplay
+          wget -O ./Season7/S7_sponsor.json https://api.the-finals-leaderboard.com/v1/leaderboard/s7sponsor/crossplay
+          wget -O ./Season7/S7_powershift.json https://api.the-finals-leaderboard.com/v1/leaderboard/s7powershift/crossplay
+          wget -O ./Season7/S7_tdm.json https://api.the-finals-leaderboard.com/v1/leaderboard/s7teamdeathmatch/crossplay
+          wget -O ./Season7/S7_quickcash.json https://api.the-finals-leaderboard.com/v1/leaderboard/s7quickcash/crossplay
+          wget -O ./Season7/S7_terminalattack.json https://api.the-finals-leaderboard.com/v1/leaderboard/s7terminalattack/crossplay
+      
       - name: commit changes
         run: |
           git config user.name "Github Action"
