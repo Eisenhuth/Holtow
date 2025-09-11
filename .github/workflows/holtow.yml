@@ -70,6 +70,7 @@ jobs:
           wget -O ./Season8/S8_powershift.json https://api.the-finals-leaderboard.com/v1/leaderboard/s8powershift/crossplay
           wget -O ./Season8/S8_tdm.json https://api.the-finals-leaderboard.com/v1/leaderboard/s8teamdeathmatch/crossplay
           wget -O ./Season8/S8_quickcash.json https://api.the-finals-leaderboard.com/v1/leaderboard/s8quickcash/crossplay
+          wget -O ./Season8/S8_head2head.json https://api.the-finals-leaderboard.com/v1/leaderboard/s8head2head/crossplay
           
       - name: commit changes
         run: |
