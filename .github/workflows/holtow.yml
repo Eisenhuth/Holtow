@@ -62,7 +62,15 @@ jobs:
           wget -O ./Season7/S7_tdm.json https://api.the-finals-leaderboard.com/v1/leaderboard/s7teamdeathmatch/crossplay
           wget -O ./Season7/S7_quickcash.json https://api.the-finals-leaderboard.com/v1/leaderboard/s7quickcash/crossplay
           wget -O ./Season7/S7_terminalattack.json https://api.the-finals-leaderboard.com/v1/leaderboard/s7terminalattack/crossplay
-      
+
+          mkdir -p ./Season8
+          wget -O ./Season8/S8_worldtour.json https://api.the-finals-leaderboard.com/v1/leaderboard/s8worldtour/crossplay
+          wget -O ./Season8/S8_crossplay.json https://api.the-finals-leaderboard.com/v1/leaderboard/s8/crossplay
+          wget -O ./Season8/S8_sponsor.json https://api.the-finals-leaderboard.com/v1/leaderboard/s8sponsor/crossplay
+          wget -O ./Season8/S8_powershift.json https://api.the-finals-leaderboard.com/v1/leaderboard/s8powershift/crossplay
+          wget -O ./Season8/S8_tdm.json https://api.the-finals-leaderboard.com/v1/leaderboard/s8teamdeathmatch/crossplay
+          wget -O ./Season8/S8_quickcash.json https://api.the-finals-leaderboard.com/v1/leaderboard/s8quickcash/crossplay
+          
       - name: commit changes
         run: |
           git config user.name "Github Action"
