@@ -71,6 +71,16 @@ jobs:
           wget -O ./Season8/S8_tdm.json https://api.the-finals-leaderboard.com/v1/leaderboard/s8teamdeathmatch/crossplay
           wget -O ./Season8/S8_quickcash.json https://api.the-finals-leaderboard.com/v1/leaderboard/s8quickcash/crossplay
           wget -O ./Season8/S8_head2head.json https://api.the-finals-leaderboard.com/v1/leaderboard/s8head2head/crossplay
+
+          mkdir -p ./Season9
+          wget -O ./Season9/S9_worldtour.json https://api.the-finals-leaderboard.com/v1/leaderboard/s9worldtour/crossplay
+          wget -O ./Season9/S9_crossplay.json https://api.the-finals-leaderboard.com/v1/leaderboard/s9/crossplay
+          wget -O ./Season9/S9_sponsor.json https://api.the-finals-leaderboard.com/v1/leaderboard/s9sponsor/crossplay
+          wget -O ./Season9/S9_powershift.json https://api.the-finals-leaderboard.com/v1/leaderboard/s9powershift/crossplay
+          wget -O ./Season9/S9_tdm.json https://api.the-finals-leaderboard.com/v1/leaderboard/s9teamdeathmatch/crossplay
+          wget -O ./Season9/S9_quickcash.json https://api.the-finals-leaderboard.com/v1/leaderboard/s9quickcash/crossplay
+          wget -O ./Season9/S9_head2head.json https://api.the-finals-leaderboard.com/v1/leaderboard/s9head2head/crossplay
+          wget -O ./Season9/S9_pointbreak.json https://api.the-finals-leaderboard.com/v1/leaderboard/s9pointbreak/crossplay
           
       - name: commit changes
         run: |
