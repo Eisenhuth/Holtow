@@ -13,17 +13,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: digitally insured, virtually secured
-        run: |       
-          mkdir -p ./Season9
-          wget -O ./Season9/S9_worldtour.json https://api.the-finals-leaderboard.com/v1/leaderboard/s9worldtour/crossplay
-          wget -O ./Season9/S9_crossplay.json https://api.the-finals-leaderboard.com/v1/leaderboard/s9/crossplay
-          wget -O ./Season9/S9_sponsor.json https://api.the-finals-leaderboard.com/v1/leaderboard/s9sponsor/crossplay
-          wget -O ./Season9/S9_powershift.json https://api.the-finals-leaderboard.com/v1/leaderboard/s9powershift/crossplay
-          wget -O ./Season9/S9_tdm.json https://api.the-finals-leaderboard.com/v1/leaderboard/s9teamdeathmatch/crossplay
-          wget -O ./Season9/S9_quickcash.json https://api.the-finals-leaderboard.com/v1/leaderboard/s9quickcash/crossplay
-          wget -O ./Season9/S9_head2head.json https://api.the-finals-leaderboard.com/v1/leaderboard/s9head2head/crossplay
-          wget -O ./Season9/S9_pointbreak.json https://api.the-finals-leaderboard.com/v1/leaderboard/s9pointbreak/crossplay
-
+        run: |   
           mkdir -p ./Season10
           wget -O ./Season10/S10_worldtour.json https://api.the-finals-leaderboard.com/v1/leaderboard/s10worldtour/crossplay
           wget -O ./Season10/S10_crossplay.json https://api.the-finals-leaderboard.com/v1/leaderboard/s10/crossplay
@@ -32,6 +22,15 @@ jobs:
           wget -O ./Season10/S10_tdm.json https://api.the-finals-leaderboard.com/v1/leaderboard/s10teamdeathmatch/crossplay
           wget -O ./Season10/S10_quickcash.json https://api.the-finals-leaderboard.com/v1/leaderboard/s10quickcash/crossplay
           wget -O ./Season10/S10_pointbreak.json https://api.the-finals-leaderboard.com/v1/leaderboard/s10pointbreak/crossplay
+
+          mkdir -p ./Season11
+          wget -O ./Season11/S11_worldtour.json https://api.the-finals-leaderboard.com/v1/leaderboard/s11worldtour/crossplay
+          wget -O ./Season11/S11_crossplay.json https://api.the-finals-leaderboard.com/v1/leaderboard/s11/crossplay
+          wget -O ./Season11/S11_sponsor.json https://api.the-finals-leaderboard.com/v1/leaderboard/s11sponsor/crossplay
+          wget -O ./Season11/S11_powershift.json https://api.the-finals-leaderboard.com/v1/leaderboard/s11powershift/crossplay
+          wget -O ./Season11/S11_tdm.json https://api.the-finals-leaderboard.com/v1/leaderboard/s11teamdeathmatch/crossplay
+          wget -O ./Season11/S11_quickcash.json https://api.the-finals-leaderboard.com/v1/leaderboard/s11quickcash/crossplay
+          wget -O ./Season11/S11_pointbreak.json https://api.the-finals-leaderboard.com/v1/leaderboard/s11pointbreak/crossplay
           
       - name: commit changes
         run: |
