@@ -14,15 +14,6 @@ jobs:
 
       - name: digitally insured, virtually secured
         run: |   
-          mkdir -p ./Season10
-          wget -O ./Season10/S10_worldtour.json https://api.the-finals-leaderboard.com/v1/leaderboard/s10worldtour/crossplay
-          wget -O ./Season10/S10_crossplay.json https://api.the-finals-leaderboard.com/v1/leaderboard/s10/crossplay
-          wget -O ./Season10/S10_sponsor.json https://api.the-finals-leaderboard.com/v1/leaderboard/s10sponsor/crossplay
-          wget -O ./Season10/S10_powershift.json https://api.the-finals-leaderboard.com/v1/leaderboard/s10powershift/crossplay
-          wget -O ./Season10/S10_tdm.json https://api.the-finals-leaderboard.com/v1/leaderboard/s10teamdeathmatch/crossplay
-          wget -O ./Season10/S10_quickcash.json https://api.the-finals-leaderboard.com/v1/leaderboard/s10quickcash/crossplay
-          wget -O ./Season10/S10_pointbreak.json https://api.the-finals-leaderboard.com/v1/leaderboard/s10pointbreak/crossplay
-
           mkdir -p ./Season11
           wget -O ./Season11/S11_worldtour.json https://api.the-finals-leaderboard.com/v1/leaderboard/s11worldtour/crossplay
           wget -O ./Season11/S11_crossplay.json https://api.the-finals-leaderboard.com/v1/leaderboard/s11/crossplay
@@ -31,6 +22,15 @@ jobs:
           wget -O ./Season11/S11_tdm.json https://api.the-finals-leaderboard.com/v1/leaderboard/s11teamdeathmatch/crossplay
           wget -O ./Season11/S11_quickcash.json https://api.the-finals-leaderboard.com/v1/leaderboard/s11quickcash/crossplay
           wget -O ./Season11/S11_pointbreak.json https://api.the-finals-leaderboard.com/v1/leaderboard/s11pointbreak/crossplay
+
+          mkdir -p ./Season12
+          wget -O ./Season12/S12_worldtour.json https://api.the-finals-leaderboard.com/v1/leaderboard/s12worldtour/crossplay
+          wget -O ./Season12/S12_crossplay.json https://api.the-finals-leaderboard.com/v1/leaderboard/s12/crossplay
+          wget -O ./Season12/S12_sponsor.json https://api.the-finals-leaderboard.com/v1/leaderboard/s12sponsor/crossplay
+          wget -O ./Season12/S12_powershift.json https://api.the-finals-leaderboard.com/v1/leaderboard/s12powershift/crossplay
+          wget -O ./Season12/S12_tdm.json https://api.the-finals-leaderboard.com/v1/leaderboard/s12teamdeathmatch/crossplay
+          wget -O ./Season12/S12_quickcash.json https://api.the-finals-leaderboard.com/v1/leaderboard/s12quickcash/crossplay
+          wget -O ./Season12/S12_pointbreak.json https://api.the-finals-leaderboard.com/v1/leaderboard/s12pointbreak/crossplay
           
       - name: commit changes
         run: |
